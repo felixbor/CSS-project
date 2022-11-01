@@ -1,0 +1,145 @@
+/* Create CSS variables at the root of the document to be used throughout the style sheet */
+:root {
+ --gray: rgba(75, 78, 82, 0.993);
+ --rose: rgb(231, 69, 196);
+ --outer-space: #33393f;
+ --bright-turquoise: #2aefcb;
+
+}
+
+
+ ::selection {
+  background-color: var(--bright-turquoise);
+  color: var(--outer-space);
+
+
+}
+body {
+  
+  background-color: var(--gray);}
+main {
+  position: relative;
+}
+
+header {
+  background-color: var(--gray);
+  color:var(--rose); 
+  height: 90px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+header  h1{
+  padding: 20px;
+
+}
+header p{
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align:center ;
+  color: azure;font-size: 20px;
+}
+
+
+.container {
+display:grid;
+grid-template-columns:repeat(3,1fr);
+padding: 80px;
+}
+
+
+.card {
+ 
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(247, 244, 247);
+  padding: 20PX;
+  margin: 10px;
+  border-style: dashed;
+  border-width: 2px;
+  
+}
+
+.card h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: -30px;
+  border-style: solid  ;
+  border-radius: 8px;
+  background-color: var(--gray);
+  color: var(--rose);
+  border-color: azure;
+  
+  
+}
+.card h3 {
+ 
+  text-align: center;
+  line-height: 30px; 
+  color:var(--rose); 
+  text-align: justify;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 10px;
+}
+.code-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+  
+  
+}
+.code-card .code-block {flex-grow: 1;}
+
+  pre { 
+  white-space: pre-wrap;
+  overflow: auto;
+  tab-size: 4;
+  padding: 1.2rem 1rem;
+  border-radius: 8px;
+  transition: all 500ms easy-in-out;
+  background-image: linear-gradient(rgba(232, 102, 236, 0.3)0%,
+  rgb(232, 102, 236, 0.6)100%);
+  border-radius: 8px;
+ display: flex;
+ 
+  }
+
+ code {
+  font-family: Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+    'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono',
+    'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier,
+    monospace;
+    line-height: 20px;
+ }
+footer {
+  color: var(--rose);
+  font-size: larger;
+  margin-top: 50px;
+  padding-bottom: 10px;
+  text-align: center;}
+
+   pre:active {
+    user-select: all;
+  }
+
+.card:hover,
+.card:hover  .card-header{ box-shadow: inset 0px 0px 10px rgb(198, 192, 204);  }
+ 
+  @media screen and (max-width: 992px  ) {
+    .container
+     {display: grid;
+      grid-template-columns:repeat(2, 1fr);
+     }
+  }
+ @media screen and (max-width: 768px) {
+   body
+  .container
+     {display: flex;
+      flex-direction: column;
+    }
+  }
